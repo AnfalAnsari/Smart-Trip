@@ -50,6 +50,7 @@ transition-duration: 0.4s;
   background-image: url("let.jpg");
 
   min-height: 380px;
+  margin-top: 50px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -138,13 +139,13 @@ alert("Your details are submitted");
 	
 
 	<div width=50% >
-	<img src ="http://localhost/f/logo.png"width="755">
-	<img src ="http://localhost/f/image_2.jpg" width="741">
+	<img  style = "float: left;"src ="http://localhost/f/logo.png"width=50%>
+	<img src ="http://localhost/f/image_2.jpg" width=50%>
 	</div>
 	
-	 <p><font size="18"><center>Codes of Places</font></center></p>
-	  <p>	<center>a--> New Delhi     b-->Neemrana     c-->Aligarh<br>d-->Jaipur    e-->Alwar    f-->Sihri<br>g--> Agra    h-->Guna     i-->Kota <br>j--> Bhopal     k-->Bhind     l-->Kanpur</font></center></p>
-	
+	 <!-- <p><font size="18"><center>Codes of Places</font></center></p>
+	  <p>	<center>a-> New Delhi     b->Neemrana     c->Aligarh<br>d->Jaipur    e->Alwar    f->Sihri<br>g-> Agra    h->Guna     i->Kota <br>j-> Bhopal     k->Bhind     l->Kanpur</font></center></p>
+	 -->
 	
 	<div class="bg">
 
@@ -263,9 +264,39 @@ alert("Your details are submitted");
 
 </P><br>
 From:
-<input type="text" name = "txt1">	
-     To:
-<input type="text" name = "txt2">
+<!-- <input type="text" name = "txt1">	
+ -->   
+ <select name="origin" class="dbox">
+	<option> - select - </option>
+	<option value="a">New Delhi</option>
+	<option value="b">Neemrana</option>
+	<option value="c">Aligarh</option>
+	<option value="d">Jaipur</option>
+	<option value="e">Alwar</option>
+	<option value="f">Sihri</option>
+	<option value="g">Agra</option>
+	<option value="h">Guna</option>
+	<option value="i">Kota</option>
+	<option value="j">Bhopal</option>
+	<option value="k">Bhind</option>
+	<option value="l">Kanpur</option>
+</select>  To:
+<!-- <input type="text" name = "txt2"> -->
+<select name="destinat" class="dbox">
+	<option> - select - </option>
+	<option value="a">New Delhi</option>
+	<option value="b">Neemrana</option>
+	<option value="c">Aligarh</option>
+	<option value="d">Jaipur</option>
+	<option value="e">Alwar</option>
+	<option value="f">Sihri</option>
+	<option value="g">Agra</option>
+	<option value="h">Guna</option>
+	<option value="i">Kota</option>
+	<option value="j">Bhopal</option>
+	<option value="k">Bhind</option>
+	<option value="l">Kanpur</option>
+</select>
 <br>
 <br>
 <input type = "Submit" class="button">

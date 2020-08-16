@@ -48,13 +48,29 @@ function runTest() {
 	$g->addedge("k", "g", 156);
 	$g->addedge("l", "g", 280);
 	
-	list($distances, $prev) = $g->paths_from($_POST["txt1"]);
+	list($distances, $prev) = $g->paths_from($_POST["origin"]);
 	
-	$path = $g->paths_to($prev, $_POST["txt2"]);
+	$path = $g->paths_to($prev, $_POST["destination"]);
+	$numItems = count($path);
+	$ref = array("a"=>"New Delhi", "b"=>"Neemrana", "c"=>"Aligarh","d"=>"Jaipur","e"=>"Alwar","f"=>"Sihri","g"=>"Agra","h"=>"Guna","i"=>"Kota","j"=>"Bhopal","k"=>"Bhind","l"=>"Kanpur");
+	echo "Origin - ".$_POST["origin"]."=".$ref[$_POST["origin"]]."<br>"."destination - ".$_POST["destination"]."=".$ref[$_POST["destination"]]."<br>";
 	
+	echo "<H3> path</H3> <br>";
+	$i = 0;
+	foreach ($path as $key => $value) {
+		# code...
+		 if(++$i === $numItems)
+		 {
+		echo $ref[$value];
+	     }
+	     else
+	     {
+	     	echo $ref[$value]."=>";
+	     }
+	}
+	
+	echo("<hr>a--> New Delhi <br>    b-->Neemrana  <br>   c-->Aligarh <br>  d-->Jaipur  <br>  e-->Alwar <br>   f-->Sihri <br>   g--> Agra <br>   h-->Guna  <br>   i-->Kota <br>   j--> Bhopal  <br>   k-->Bhind <br>    l-->Kanpur<br>");
 	print_r($path);
-	
-	echo("a--> New Delhi     b-->Neemrana     c-->Aligarh   d-->Jaipur    e-->Alwar    f-->Sihri    g--> Agra    h-->Guna     i-->Kota    j--> Bhopal     k-->Bhind     l-->Kanpur");
-	
+
 }
 runTest();
